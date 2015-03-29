@@ -13,5 +13,6 @@
 @interface BVideoPlayer : UIView
 
 - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher NS_DESIGNATED_INITIALIZER;
+- (void)initFromSource:(NSString *)source;
 
 @end

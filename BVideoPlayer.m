@@ -28,19 +28,24 @@
 {
     if ((self = [super initWithFrame:CGRectZero])) {
         _eventDispatcher = eventDispatcher;
-
-        NSURL *videoURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"mp4"]];
-        _player = [[MPMoviePlayerController alloc] initWithContentURL: videoURL];
+        _player = [[MPMoviePlayerController alloc] init];
         [self addSubview: _player.view];
-        [_player setControlStyle:MPMovieControlStyleNone];
-        [_player setScalingMode:MPMovieScalingModeAspectFill];
-        [_player setRepeatMode:MPMovieRepeatModeOne];
-        [_player.view setFrame: self.bounds];
-        [_player prepareToPlay];
-        [_player play];
 
     }
     return self;
+}
+
+- (void)initFromSource:(NSString *)source
+{
+    NSLog(@"got here!");
+    NSURL *videoURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:source ofType:@"mp4"]];
+    [_player setContentURL:videoURL];
+    [_player setControlStyle:MPMovieControlStyleNone];
+    [_player setScalingMode:MPMovieScalingModeAspectFill];
+    [_player setRepeatMode:MPMovieRepeatModeOne];
+    [_player.view setFrame: self.bounds];
+    [_player prepareToPlay];
+    [_player play];
 }
 
 - (NSArray *)reactSubviews

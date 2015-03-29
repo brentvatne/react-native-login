@@ -19,4 +19,14 @@
     return [[BVideoPlayer alloc] initWithEventDispatcher:_bridge.eventDispatcher];
 }
 
+RCT_CUSTOM_VIEW_PROPERTY(src, NSString, BVideoPlayer)
+{
+    NSLog(@"maybe?");
+    if (json) {
+        NSLog(@"almost!");
+        [view initFromSource:[RCTConvert NSString:json]];
+    }
+}
+
+
 @end
