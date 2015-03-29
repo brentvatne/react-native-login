@@ -33,6 +33,8 @@
         _player = [[MPMoviePlayerController alloc] initWithContentURL: videoURL];
         [self addSubview: _player.view];
         [_player setControlStyle:MPMovieControlStyleNone];
+        [_player setScalingMode:MPMovieScalingModeAspectFill];
+        [_player setRepeatMode:MPMovieRepeatModeOne];
         [_player.view setFrame: self.bounds];
         [_player prepareToPlay];
         [_player play];
