@@ -5,6 +5,7 @@ var StyleSheet = require('StyleSheet');
 var createReactIOSNativeComponentClass = require('createReactIOSNativeComponentClass');
 var PropTypes = require('ReactPropTypes');
 var StyleSheetPropType = require('StyleSheetPropType');
+var VideoResizeMode = require('./VideoResizeMode');
 var VideoStylePropTypes = require('./VideoStylePropTypes');
 var NativeMethodsMixin = require('NativeMethodsMixin');
 var flattenStyle = require('flattenStyle');
@@ -27,17 +28,28 @@ var Video = React.createClass({
     var style = flattenStyle([styles.base, this.props.style]);
     var source = this.props.source;
 
+    var resizeMode;
+    var contentModes = NativeModules.VideoContentModes;
+    if (style.resizeMode === VideoResizeMode.stretch) {
+      resizeMode = contentModes.ScaleToFill;
+    } else if (style.resizeMode === VideoResizeMode.contain) {
+      resizeMode = contentModes.ScaleAspectFit;
+    } else {
+      resizeMode = contentModes.ScaleAspectFill;
+    }
+
     var nativeProps = merge(this.props, {
       style,
+      resizeMode,
+      src: source,
     });
 
-    nativeProps.src = source;
     return <BVideoPlayer {... nativeProps} />
   },
 });
 
 var BVideoPlayer = createReactIOSNativeComponentClass({
-  validAttributes: merge(ReactIOSViewAttributes.UIView, {src: true}),
+  validAttributes: merge(ReactIOSViewAttributes.UIView, {src: true, resizeMode: true}),
   uiViewClassName: 'BVideoPlayer',
 });
 

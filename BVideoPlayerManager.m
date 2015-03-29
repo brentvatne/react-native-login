@@ -28,5 +28,11 @@ RCT_CUSTOM_VIEW_PROPERTY(src, NSString, BVideoPlayer)
     }
 }
 
+RCT_CUSTOM_VIEW_PROPERTY(resizeMode, NSInteger, BVideoPlayer)
+{
+    NSLog(@"hello!");
+    [view setResizeMode:[RCTConvert NSInteger:json]];
+}
+
 
 @end

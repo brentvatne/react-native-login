@@ -28,6 +28,7 @@
 		BB9ED1021AC876D700FC2916 /* BVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9ED1011AC876D700FC2916 /* BVideoPlayer.m */; };
 		BB9ED1081AC87D1300FC2916 /* BVideoPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9ED1071AC87D1300FC2916 /* BVideoPlayerManager.m */; };
 		BB9ED10A1AC87E3800FC2916 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BB9ED1091AC87E3800FC2916 /* background.mp4 */; };
+		BBD49E271AC8BBB700610F8E /* VideoContentModes.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E261AC8BBB700610F8E /* VideoContentModes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		BB9ED1061AC87D1300FC2916 /* BVideoPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVideoPlayerManager.h; sourceTree = "<group>"; };
 		BB9ED1071AC87D1300FC2916 /* BVideoPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVideoPlayerManager.m; sourceTree = "<group>"; };
 		BB9ED1091AC87E3800FC2916 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.mp4; path = ../../Desktop/background.mp4; sourceTree = "<group>"; };
+		BBD49E261AC8BBB700610F8E /* VideoContentModes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoContentModes.m; sourceTree = "<group>"; };
+		BBD49E301AC8BBC100610F8E /* VideoContentModes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoContentModes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				BB6BBC4B1AC4D03700E64D73 /* FacebookLoginManager.h */,
 				BB9ED0F81AC8742700FC2916 /* BVideoPlayer.h */,
 				BB9ED1011AC876D700FC2916 /* BVideoPlayer.m */,
+				BBD49E261AC8BBB700610F8E /* VideoContentModes.m */,
+				BBD49E301AC8BBC100610F8E /* VideoContentModes.h */,
 			);
 			name = FacebookLogin;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				BB9ED1081AC87D1300FC2916 /* BVideoPlayerManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BBD49E271AC8BBB700610F8E /* VideoContentModes.m in Sources */,
 				BB9ED1021AC876D700FC2916 /* BVideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
