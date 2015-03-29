@@ -10,11 +10,12 @@ var {
 } = React;
 
 var FacebookLoginManager = require('NativeModules').FacebookLoginManager;
+var Video = require('./BVideoPlayer.ios');
 
 var FacebookLogin = React.createClass({
   getInitialState() {
     return {
-      result: '...'
+      result: ''
     }
   },
 
@@ -35,18 +36,27 @@ var FacebookLogin = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <TouchableHighlight onPress={this.login}>
-          <Text style={styles.welcome}>
-            Facebook Login
+        <Video style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}>
+        </Video>
+
+        <TouchableHighlight onPress={this.login} style={styles.button}>
+          <Text style={styles.buttonText}>
+            Sign in with Facebook
           </Text>
         </TouchableHighlight>
-        <Text style={styles.instructions}>
-          {this.state.result}
-        </Text>
+        <TouchableHighlight>
+          <Text style={styles.result}>
+            {this.state.result}
+          </Text>
+        </TouchableHighlight>
       </View>
     );
   }
 });
+
+
+      // <View style={styles.container}>
+      // </View>
 
 var styles = StyleSheet.create({
   container: {
@@ -55,14 +65,22 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
+  button: {
+    backgroundColor: "#3a5896",
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5
+  },
+  buttonText: {
+    fontSize: 18,
+    fontFamily: 'Gill Sans',
     textAlign: 'center',
     margin: 10,
+    color: '#ffffff',
   },
-  instructions: {
+  result: {
     textAlign: 'center',
-    color: '#333333',
+    backgroundColor: 'transparent',
   },
 });
 
