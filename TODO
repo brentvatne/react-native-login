@@ -1,2 +1,9 @@
-- Accept a source option on the Video tag
-- Add similar resizeMode options as exist for Images, where possible
+Remaining:
+- Clean up and integrate into a PR
+- Support require('video!...')
+  - Extensions other than mp4? image!... does not take an extension
+- Look at reference for additional properties that can be tweaked
+
+Complete:
+x Accept a source option on the Video tag
+x Add similar resizeMode options as exist for Images, where possible
