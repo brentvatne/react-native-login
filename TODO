@@ -2,6 +2,7 @@ Remaining:
 - Clean up and integrate into a PR
 - Support require('video!...')
   - Extensions other than mp4? image!... does not take an extension
+- Add option for repeat - none or forever
 - Look at reference for additional properties that can be tweaked
 
 Complete:
