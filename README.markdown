@@ -1,7 +1,11 @@
-[Blog post here](http://brentvatne.ca/facebook-login-with-react-native/)
+## react-native login
 
-See example below - note that it is in the simulator so it just uses the browser, it will use the Facebook app if it is available.
+[Blog post about integrating Facebook SDK with react-native here](http://brentvatne.ca/facebook-login-with-react-native/)
 
-![Demo screenshots](https://github.com/brentvatne/facebook-login/blob/master/demo!.gif)
+Check out the example gif below (sorry it's a bit heavy) to see it in action. Note that it is in the simulator so it uses the browser for Facebook auth; it will use the Facebook app if it is available. Video background is implemented in `BVideoPlayer` `BVideoPlayerManager` `VideoContentModes` `VideoResizeMode` `VideoStylePropTypes` and `BVideoPlayer.ios.js`.
+
+![Demo gif](https://github.com/brentvatne/facebook-login/blob/master/demo!.gif)
 
 *Feel free to use the token and user id above to get my basic information on Facebook :p*
+
+*`background.mp4` does not belong to me, I borrowed it from airbnb.com*
