@@ -27,8 +27,8 @@
 		BB6BBC4A1AC4D01600E64D73 /* FacebookLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6BBC491AC4D01600E64D73 /* FacebookLoginManager.m */; };
 		BBD49E271AC8BBB700610F8E /* VideoContentModes.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E261AC8BBB700610F8E /* VideoContentModes.m */; };
 		BBD49E321AC8D23C00610F8E /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BBD49E311AC8D23C00610F8E /* background.mp4 */; };
-		BBD49E371AC8D67D00610F8E /* RCTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E341AC8D67D00610F8E /* RCTVideoPlayer.m */; };
-		BBD49E381AC8D67D00610F8E /* RCTVideoPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E361AC8D67D00610F8E /* RCTVideoPlayerManager.m */; };
+		BBD49E571AC8DFCE00610F8E /* RCTVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E541AC8DFCE00610F8E /* RCTVideo.m */; };
+		BBD49E581AC8DFCE00610F8E /* RCTVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E561AC8DFCE00610F8E /* RCTVideoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,10 +123,10 @@
 		BBD49E261AC8BBB700610F8E /* VideoContentModes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoContentModes.m; sourceTree = "<group>"; };
 		BBD49E301AC8BBC100610F8E /* VideoContentModes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoContentModes.h; sourceTree = "<group>"; };
 		BBD49E311AC8D23C00610F8E /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
-		BBD49E331AC8D67D00610F8E /* RCTVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTVideoPlayer.h; sourceTree = "<group>"; };
-		BBD49E341AC8D67D00610F8E /* RCTVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTVideoPlayer.m; sourceTree = "<group>"; };
-		BBD49E351AC8D67D00610F8E /* RCTVideoPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTVideoPlayerManager.h; sourceTree = "<group>"; };
-		BBD49E361AC8D67D00610F8E /* RCTVideoPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTVideoPlayerManager.m; sourceTree = "<group>"; };
+		BBD49E531AC8DFCE00610F8E /* RCTVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTVideo.h; sourceTree = "<group>"; };
+		BBD49E541AC8DFCE00610F8E /* RCTVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTVideo.m; sourceTree = "<group>"; };
+		BBD49E551AC8DFCE00610F8E /* RCTVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTVideoManager.h; sourceTree = "<group>"; };
+		BBD49E561AC8DFCE00610F8E /* RCTVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTVideoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,10 +212,10 @@
 		13B07FAE1A68108700A75B9A /* FacebookLogin */ = {
 			isa = PBXGroup;
 			children = (
-				BBD49E331AC8D67D00610F8E /* RCTVideoPlayer.h */,
-				BBD49E341AC8D67D00610F8E /* RCTVideoPlayer.m */,
-				BBD49E351AC8D67D00610F8E /* RCTVideoPlayerManager.h */,
-				BBD49E361AC8D67D00610F8E /* RCTVideoPlayerManager.m */,
+				BBD49E531AC8DFCE00610F8E /* RCTVideo.h */,
+				BBD49E541AC8DFCE00610F8E /* RCTVideo.m */,
+				BBD49E551AC8DFCE00610F8E /* RCTVideoManager.h */,
+				BBD49E561AC8DFCE00610F8E /* RCTVideoManager.m */,
 				BBD49E311AC8D23C00610F8E /* background.mp4 */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -453,12 +453,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD49E381AC8D67D00610F8E /* RCTVideoPlayerManager.m in Sources */,
 				BB6BBC4A1AC4D01600E64D73 /* FacebookLoginManager.m in Sources */,
+				BBD49E581AC8DFCE00610F8E /* RCTVideoManager.m in Sources */,
+				BBD49E571AC8DFCE00610F8E /* RCTVideo.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				BBD49E271AC8BBB700610F8E /* VideoContentModes.m in Sources */,
-				BBD49E371AC8D67D00610F8E /* RCTVideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,13 +44,13 @@ var Video = React.createClass({
       src: source,
     });
 
-    return <RCTVideoPlayer {... nativeProps} />
+    return <RCTVideo {... nativeProps} />
   },
 });
 
-var RCTVideoPlayer = createReactIOSNativeComponentClass({
+var RCTVideo = createReactIOSNativeComponentClass({
   validAttributes: merge(ReactIOSViewAttributes.UIView, {src: true, resizeMode: true}),
-  uiViewClassName: 'RCTVideoPlayer',
+  uiViewClassName: 'RCTVideo',
 });
 
 var styles = StyleSheet.create({

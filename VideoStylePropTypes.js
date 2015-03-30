@@ -9,18 +9,4 @@ var VideoStylePropTypes = {
   resizeMode: ReactPropTypes.oneOf(Object.keys(VideoResizeMode)),
 };
 
-var unsupportedProps = Object.keys({
-  padding: null,
-  paddingTop: null,
-  paddingLeft: null,
-  paddingRight: null,
-  paddingBottom: null,
-  paddingVertical: null,
-  paddingHorizontal: null,
-});
-
-for (var key in unsupportedProps) {
-  delete VideoStylePropTypes[key];
-}
-
 module.exports = VideoStylePropTypes;

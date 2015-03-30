@@ -1,12 +1,4 @@
-//
-//  RCTVideoPlayer.m
-//  FacebookLogin
-//
-//  Created by Brent Vatne on 2015-03-29.
-//  Copyright (c) 2015 Facebook. All rights reserved.
-//
-
-#import "RCTVideoPlayer.h"
+#import "RCTVideo.h"
 
 #import "RCTEventDispatcher.h"
 #import "RCTLog.h"
@@ -18,7 +10,7 @@
 
 @import MediaPlayer;
 
-@implementation RCTVideoPlayer
+@implementation RCTVideo
 {
     MPMoviePlayerController *_player;
     RCTEventDispatcher *_eventDispatcher;
@@ -76,6 +68,5 @@
     [super layoutSubviews];
     _player.view.frame = self.bounds;
 }
-
 
 @end

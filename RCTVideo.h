@@ -2,7 +2,7 @@
 
 @class RCTEventDispatcher;
 
-@interface RCTVideoPlayer : UIView
+@interface RCTVideo : UIView
 
 - (instancetype)initWithEventDispatcher:(RCTEventDispatcher *)eventDispatcher NS_DESIGNATED_INITIALIZER;
 - (void)initFromSource:(NSString *)source;
