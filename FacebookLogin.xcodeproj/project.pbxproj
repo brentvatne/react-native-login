@@ -27,8 +27,8 @@
 		BB6BBC4A1AC4D01600E64D73 /* FacebookLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6BBC491AC4D01600E64D73 /* FacebookLoginManager.m */; };
 		BB9ED1021AC876D700FC2916 /* BVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9ED1011AC876D700FC2916 /* BVideoPlayer.m */; };
 		BB9ED1081AC87D1300FC2916 /* BVideoPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9ED1071AC87D1300FC2916 /* BVideoPlayerManager.m */; };
-		BB9ED10A1AC87E3800FC2916 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BB9ED1091AC87E3800FC2916 /* background.mp4 */; };
 		BBD49E271AC8BBB700610F8E /* VideoContentModes.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD49E261AC8BBB700610F8E /* VideoContentModes.m */; };
+		BBD49E321AC8D23C00610F8E /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BBD49E311AC8D23C00610F8E /* background.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +124,9 @@
 		BB9ED1011AC876D700FC2916 /* BVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVideoPlayer.m; sourceTree = "<group>"; };
 		BB9ED1061AC87D1300FC2916 /* BVideoPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVideoPlayerManager.h; sourceTree = "<group>"; };
 		BB9ED1071AC87D1300FC2916 /* BVideoPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVideoPlayerManager.m; sourceTree = "<group>"; };
-		BB9ED1091AC87E3800FC2916 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.mp4; path = ../../Desktop/background.mp4; sourceTree = "<group>"; };
 		BBD49E261AC8BBB700610F8E /* VideoContentModes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoContentModes.m; sourceTree = "<group>"; };
 		BBD49E301AC8BBC100610F8E /* VideoContentModes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoContentModes.h; sourceTree = "<group>"; };
+		BBD49E311AC8D23C00610F8E /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +212,7 @@
 		13B07FAE1A68108700A75B9A /* FacebookLogin */ = {
 			isa = PBXGroup;
 			children = (
-				BB9ED1091AC87E3800FC2916 /* background.mp4 */,
+				BBD49E311AC8D23C00610F8E /* background.mp4 */,
 				BB9ED1061AC87D1300FC2916 /* BVideoPlayerManager.h */,
 				BB9ED1071AC87D1300FC2916 /* BVideoPlayerManager.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -440,7 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB9ED10A1AC87E3800FC2916 /* background.mp4 in Resources */,
+				BBD49E321AC8D23C00610F8E /* background.mp4 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
