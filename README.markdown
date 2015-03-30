@@ -6,6 +6,4 @@ Check out the example gif below (sorry it's a bit heavy) to see it in action. No
 
 ![Demo gif](https://github.com/brentvatne/facebook-login/blob/master/demo!!!.gif)
 
-*Feel free to use the token and user id above to get my basic information on Facebook :p*
-
 *`background.mp4` does not belong to me, I borrowed it from airbnb.com*
