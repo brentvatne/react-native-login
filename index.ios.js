@@ -10,7 +10,7 @@ var {
 } = React;
 
 var FacebookLoginManager = require('NativeModules').FacebookLoginManager;
-var Video = require('./BVideoPlayer.ios');
+var Video = require('./RCTVideoPlayer.ios');
 
 var FacebookLogin = React.createClass({
   getInitialState() {

@@ -8,6 +8,6 @@
 
 #import "RCTViewManager.h"
 
-@interface BVideoPlayerManager : RCTViewManager
+@interface RCTVideoPlayerManager : RCTViewManager
 
 @end

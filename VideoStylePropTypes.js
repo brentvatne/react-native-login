@@ -9,7 +9,6 @@ var VideoStylePropTypes = {
   resizeMode: ReactPropTypes.oneOf(Object.keys(VideoResizeMode)),
 };
 
-// Video doesn't support padding correctly (#4841912)
 var unsupportedProps = Object.keys({
   padding: null,
   paddingTop: null,
