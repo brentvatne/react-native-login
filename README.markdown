@@ -4,7 +4,7 @@
 
 Check out the example gif below (sorry it's a bit heavy) to see it in action. Note that it is in the simulator so it uses the browser for Facebook auth; it will use the Facebook app if it is available. Video background is implemented in `RCTVideo` `RCTVideoManager` `VideoContentModes` `VideoResizeMode` `VideoStylePropTypes` and `RCTVideo.ios.js`.
 
-![Demo gif](https://github.com/brentvatne/facebook-login/blob/master/demo!.gif)
+![Demo gif](https://github.com/brentvatne/facebook-login/blob/master/demo!!.gif)
 
 *Feel free to use the token and user id above to get my basic information on Facebook :p*
 
