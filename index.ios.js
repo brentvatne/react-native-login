@@ -6,7 +6,8 @@ var {
   StyleSheet,
   Text,
   View,
-  TouchableHighlight
+  TouchableHighlight,
+  Image
 } = React;
 
 var FacebookLoginManager = require('NativeModules').FacebookLoginManager;
@@ -28,17 +29,28 @@ var FacebookLogin = React.createClass({
       if (error) {
         this.setState({result: error});
       } else {
-        this.setState({result: info});
+        this.setState({token: info.token, userId: info.userId});
+        this.getUser();
       }
     });
   },
 
-  render() {
+  getUser() {
+    var url = `https://graph.facebook.com/v2.3/${this.state.userId}?access_token=${this.state.token}` +
+              '&fields=name,email,picture&format=json'
+    if (this.state.token) {
+      fetch(url)
+        .then((response) => response.json())
+        .then((responseData) => {
+          this.setState({user: responseData});
+        })
+    }
+  },
+
+  renderLogInView() {
     return (
       <View style={styles.container}>
-        <Video source={"background"}
-               style={{resizeMode: 'cover', position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}>
-        </Video>
+        <Video source={"background"} style={styles.backgroundVideo} />
 
         <TouchableHighlight onPress={this.login} style={styles.button}>
           <Text style={styles.buttonText}>
@@ -52,6 +64,34 @@ var FacebookLogin = React.createClass({
         </TouchableHighlight>
       </View>
     );
+  },
+
+  renderLoggedInView() {
+    return (
+      <View style={styles.background}>
+        <Video source={"background"}
+               style={styles.backgroundVideo} />
+        <View style={styles.backgroundOverlay} />
+
+        <View style={styles.contentContainer}>
+          <View>
+            <Image source={{uri: this.state.user.picture.data.url}}
+                   style={styles.profilePicture} />
+            <Text style={styles.name}>
+              {this.state.user.name}
+            </Text>
+          </View>
+        </View>
+      </View>
+    )
+  },
+
+  render() {
+    if (!this.state.user) {
+      return this.renderLogInView();
+    } else {
+      return this.renderLoggedInView();
+    }
   }
 });
 
@@ -61,6 +101,30 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  background: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  backgroundOverlay: {
+    opacity: 0.85,
+    backgroundColor: '#ffffff',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  backgroundVideo: {
+    resizeMode: 'cover',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
   },
   button: {
     backgroundColor: "#3a5896",
@@ -75,9 +139,30 @@ var styles = StyleSheet.create({
     margin: 10,
     color: '#ffffff',
   },
-  result: {
-    textAlign: 'center',
+  contentContainer: {
+    position: 'absolute',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+  profilePicture: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    alignItems: 'center',
+    alignSelf: 'center',
+  },
+  name: {
+    fontSize: 20,
+    color: '#000000',
+    fontWeight: 'bold',
     backgroundColor: 'transparent',
+    marginTop: 15,
+    alignSelf: 'center',
   },
 });
 
