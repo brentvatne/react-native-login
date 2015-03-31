@@ -50,7 +50,7 @@ var FacebookLogin = React.createClass({
   renderLogInView() {
     return (
       <View style={styles.container}>
-        <Video source={"background"} style={styles.backgroundVideo} />
+        <Video source={"background"} style={styles.backgroundVideo} repeat={true} />
 
         <TouchableHighlight onPress={this.login} style={styles.button}>
           <Text style={styles.buttonText}>
@@ -69,8 +69,7 @@ var FacebookLogin = React.createClass({
   renderLoggedInView() {
     return (
       <View style={styles.background}>
-        <Video source={"background"}
-               style={styles.backgroundVideo} />
+        <Video source={"background"} style={styles.backgroundVideo} repeat={true} />
         <View style={styles.backgroundOverlay} />
 
         <View style={styles.contentContainer}>
