@@ -12,6 +12,7 @@ var {
 
 var FacebookLoginManager = require('NativeModules').FacebookLoginManager;
 var Video = require('react-native-video');
+var LinearGradient = require('react-native-linear-gradient');
 
 var FacebookLogin = React.createClass({
   getInitialState() {
@@ -52,10 +53,12 @@ var FacebookLogin = React.createClass({
       <View style={styles.container}>
         <Video source={"background"} style={styles.backgroundVideo} repeat={true} />
 
-        <TouchableHighlight onPress={this.login} style={styles.button}>
-          <Text style={styles.buttonText}>
-            Sign in with Facebook
-          </Text>
+        <TouchableHighlight onPress={this.login}>
+          <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
+            <Text style={styles.buttonText}>
+              Sign in with Facebook
+            </Text>
+          </LinearGradient>
         </TouchableHighlight>
         <TouchableHighlight>
           <Text style={styles.result}>
@@ -108,6 +111,12 @@ var styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+    borderRadius: 5
+  },
   backgroundOverlay: {
     opacity: 0.85,
     backgroundColor: '#ffffff',
@@ -124,12 +133,6 @@ var styles = StyleSheet.create({
     left: 0,
     bottom: 0,
     right: 0,
-  },
-  button: {
-    backgroundColor: "#3a5896",
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5
   },
   buttonText: {
     fontSize: 18,
