@@ -3,6 +3,7 @@
 var React = require('react-native');
 var {
   AppRegistry,
+  Animation,
   StyleSheet,
   Text,
   View,
@@ -11,15 +12,23 @@ var {
   Image,
 } = React;
 
+
+var merge = require('merge');
 var FacebookLoginManager = require('NativeModules').FacebookLoginManager;
 var Video = require('react-native-video');
 var LinearGradient = require('react-native-linear-gradient');
 
 var Modal = React.createClass({
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevProps.isVisible && this.props.isVisible == true) {
+      Animation.startAnimation(this.refs['this'], 300, 0, 'easeInOutQuad', {opacity: 1});
+    }
+  },
+
   render() {
     if (this.props.isVisible) {
       return (
-        <View style={modalStyles.container}>
+        <View ref="this" style={modalStyles.container}>
           <View style={modalStyles.backdrop} />
           <View style={modalStyles.closeButton}>
             <TouchableOpacity onPress={this.props.onClose}>

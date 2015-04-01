@@ -26,6 +26,7 @@
 		BB6BBC471AC4CE9300E64D73 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BBC451AC4CE9300E64D73 /* FBSDKCoreKit.framework */; };
 		BB6BBC481AC4CE9300E64D73 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BBC461AC4CE9300E64D73 /* FBSDKLoginKit.framework */; };
 		BB6BBC4A1AC4D01600E64D73 /* FacebookLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6BBC491AC4D01600E64D73 /* FacebookLoginManager.m */; };
+		BBC80B841ACC5C6500F5028A /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC80B7B1ACC5C5800F5028A /* libRCTAnimation.a */; };
 		BBD49E321AC8D23C00610F8E /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BBD49E311AC8D23C00610F8E /* background.mp4 */; };
 		BBD4CA4F1ACB17AB00E6AAB9 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD4CA451ACB179500E6AAB9 /* libBVLinearGradient.a */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,13 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTVideo;
 		};
+		BBC80B7A1ACC5C5800F5028A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC80B741ACC5C5800F5028A /* RCTAnimation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTAnimation;
+		};
 		BBD4CA441ACB179500E6AAB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BBD4CA401ACB179500E6AAB9 /* BVLinearGradient.xcodeproj */;
@@ -134,6 +142,7 @@
 		BB6BBC461AC4CE9300E64D73 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BB6BBC491AC4D01600E64D73 /* FacebookLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginManager.m; sourceTree = "<group>"; };
 		BB6BBC4B1AC4D03700E64D73 /* FacebookLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookLoginManager.h; sourceTree = "<group>"; };
+		BBC80B741ACC5C5800F5028A /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "node_modules/react-native/Libraries/Animation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		BBD49E311AC8D23C00610F8E /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		BBD4CA401ACB179500E6AAB9 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC80B841ACC5C6500F5028A /* libRCTAnimation.a in Frameworks */,
 				BBD4CA4F1ACB17AB00E6AAB9 /* libBVLinearGradient.a in Frameworks */,
 				BB65DD911ACA704100138D22 /* libRCTVideo.a in Frameworks */,
 				00481BEA1AC0C89D00671115 /* libicucore.dylib in Frameworks */,
@@ -247,6 +257,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BBC80B741ACC5C5800F5028A /* RCTAnimation.xcodeproj */,
 				BBD4CA401ACB179500E6AAB9 /* BVLinearGradient.xcodeproj */,
 				BB65DD8B1ACA6FE200138D22 /* RCTVideo.xcodeproj */,
 				BB6BBC451AC4CE9300E64D73 /* FBSDKCoreKit.framework */,
@@ -295,6 +306,14 @@
 			isa = PBXGroup;
 			children = (
 				BB65DD901ACA6FE300138D22 /* libRCTVideo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBC80B751ACC5C5800F5028A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBC80B7B1ACC5C5800F5028A /* libRCTAnimation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,6 +378,10 @@
 				{
 					ProductGroup = 00C302B01ABCB8E700DB3ED1 /* Products */;
 					ProjectRef = 00C302AF1ABCB8E700DB3ED1 /* RCTAdSupport.xcodeproj */;
+				},
+				{
+					ProductGroup = BBC80B751ACC5C5800F5028A /* Products */;
+					ProjectRef = BBC80B741ACC5C5800F5028A /* RCTAnimation.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -469,6 +492,13 @@
 			fileType = archive.ar;
 			path = libRCTVideo.a;
 			remoteRef = BB65DD8F1ACA6FE300138D22 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BBC80B7B1ACC5C5800F5028A /* libRCTAnimation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTAnimation.a;
+			remoteRef = BBC80B7A1ACC5C5800F5028A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		BBD4CA451ACB179500E6AAB9 /* libBVLinearGradient.a */ = {
