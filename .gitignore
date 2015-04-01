@@ -1,1 +1,3 @@
 node_modules/*
+FacebookLogin.xcodeproj/xcuserdata/**/*
+FacebookLogin.xcodeproj/project.xcworkspace/**/*
