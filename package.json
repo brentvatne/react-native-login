@@ -8,6 +8,7 @@
   "dependencies": {
     "react-native": "^0.3.1",
     "react-native-video": "^0.1.4",
-    "react-native-linear-gradient": "^0.1.0"
+    "react-native-linear-gradient": "^0.1.0",
+    "react-native-modal": "^0.0.3"
   }
 }
