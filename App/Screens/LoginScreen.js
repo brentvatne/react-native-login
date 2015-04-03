@@ -19,6 +19,7 @@ var LinearGradient = require('react-native-linear-gradient');
 var UserActions = require('../Actions/UserActions');
 var styles = require('./Styles');
 var UserStoreSync = require('../Mixins/UserStoreSync');
+var DeviceHeight = require('Dimensions').get('window').height;
 
 var LoginScreen = React.createClass({
   mixins: [UserStoreSync],
@@ -48,6 +49,15 @@ var LoginScreen = React.createClass({
     }
   },
 
+  showModal(transition) {
+    transition('opacity', {duration: 200, begin: 0, end: 1});
+  },
+
+  hideModal(transition) {
+    transition('height', {duration: 200, begin: DeviceHeight, end: 1200, reset: true});
+    transition('opacity', {duration: 200, begin: 1, end: 0});
+  },
+
   render() {
     return (
       <View style={styles.container}>
@@ -71,7 +81,7 @@ var LoginScreen = React.createClass({
           </TouchableOpacity>
         </View>
 
-        <Modal isVisible={this.state.modalIsOpen} onClose={this.closeModal}>
+        <Modal isVisible={this.state.modalIsOpen} onClose={this.closeModal} customShowHandler={this.showModal} customHideHandler={this.hideModal}>
           <Text style={styles.aboutTitle}>
             Welcome to the about section!
           </Text>
