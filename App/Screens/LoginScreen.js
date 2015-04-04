@@ -49,12 +49,13 @@ var LoginScreen = React.createClass({
     }
   },
 
-  showModal(transition) {
+  showModalTransition(transition) {
     transition('opacity', {duration: 200, begin: 0, end: 1});
+    transition('height', {duration: 200, begin: DeviceHeight * 2, end: DeviceHeight});
   },
 
-  hideModal(transition) {
-    transition('height', {duration: 200, begin: DeviceHeight, end: 1200, reset: true});
+  hideModalTransition(transition) {
+    transition('height', {duration: 200, begin: DeviceHeight, end: DeviceHeight * 2, reset: true});
     transition('opacity', {duration: 200, begin: 1, end: 0});
   },
 
@@ -81,7 +82,11 @@ var LoginScreen = React.createClass({
           </TouchableOpacity>
         </View>
 
-        <Modal isVisible={this.state.modalIsOpen} onClose={this.closeModal} customShowHandler={this.showModal} customHideHandler={this.hideModal}>
+        <Modal isVisible={this.state.modalIsOpen}
+               onClose={this.closeModal}
+               customShowHandler={this.showModalTransition}
+               customHideHandler={this.hideModalTransition}
+               onPressBackdrop={this.closeModal}>
           <Text style={styles.aboutTitle}>
             Welcome to the about section!
           </Text>
