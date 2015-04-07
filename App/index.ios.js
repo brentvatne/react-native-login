@@ -19,7 +19,7 @@ var FacebookLogin = React.createClass({
   },
 
   componentWillMount() {
-    LocalStorage.bootstrap(() => this.setState({bootstrapped: true}));    
+    LocalStorage.bootstrap(() => this.setState({bootstrapped: true}));
   },
 
   renderScene(route, nav) {

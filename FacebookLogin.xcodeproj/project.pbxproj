@@ -21,7 +21,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		BB65DD911ACA704100138D22 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB65DD901ACA6FE300138D22 /* libRCTVideo.a */; };
+		BB610A201AD436A500563A76 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB65DD901ACA6FE300138D22 /* libRCTVideo.a */; };
 		BB6BBC3C1AC4CD9400E64D73 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BBC3B1AC4CD9400E64D73 /* Bolts.framework */; };
 		BB6BBC471AC4CE9300E64D73 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BBC451AC4CE9300E64D73 /* FBSDKCoreKit.framework */; };
 		BB6BBC481AC4CE9300E64D73 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BBC461AC4CE9300E64D73 /* FBSDKLoginKit.framework */; };
@@ -152,9 +152,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB610A201AD436A500563A76 /* libRCTVideo.a in Frameworks */,
 				BBC80B841ACC5C6500F5028A /* libRCTAnimation.a in Frameworks */,
 				BBD4CA4F1ACB17AB00E6AAB9 /* libBVLinearGradient.a in Frameworks */,
-				BB65DD911ACA704100138D22 /* libRCTVideo.a in Frameworks */,
 				00481BEA1AC0C89D00671115 /* libicucore.dylib in Frameworks */,
 				BB6BBC471AC4CE9300E64D73 /* FBSDKCoreKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,

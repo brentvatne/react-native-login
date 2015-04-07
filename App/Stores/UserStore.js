@@ -28,6 +28,10 @@ var store = createStore({
         _user = Immutable.fromJS(merge(action.response, action.queryParams));
         store.emitChange(action);
         break;
+      case UserConstants.SIGN_OUT:
+        _user = Immutable.Map();
+        store.emitChange(action);
+        break;
     }
 
     return true;

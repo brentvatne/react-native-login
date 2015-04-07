@@ -30,7 +30,7 @@ var store = createStore({
   dispatcherIndex: dispatcher.register(function(payload) {
     action = payload.action;
 
-    if (action.response === ApiConstants.PENDING) { 
+    if (action.response === ApiConstants.PENDING) {
       return true;
     }
 
@@ -44,6 +44,14 @@ var store = createStore({
           }
         })
         break;
+      case UserConstants.SIGN_OUT:
+        AsyncStorage.removeItem(USER_KEY, (error) => {
+          if (error) {
+            console.log('Error clearing session! ' + error.message);
+          } else {
+            store.emitChange(action);
+          }
+        })
     }
 
     return true;
