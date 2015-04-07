@@ -25,7 +25,7 @@ var store = createStore({
 
     switch(action.actionType) {
       case UserConstants.FACEBOOK_SIGN_IN:
-        _user = Immutable.fromJS(merge(action.response, action.params));
+        _user = Immutable.fromJS(merge(action.response, action.queryParams));
         store.emitChange(action);
         break;
     }
