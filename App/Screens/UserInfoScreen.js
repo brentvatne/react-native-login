@@ -18,7 +18,8 @@ var UserInfoScreen = React.createClass({
   render() {
     return (
       <View style={styles.background}>
-        <Video source={"background"} style={styles.backgroundVideo} repeat={true} />
+        <Video source={"background"} style={styles.backgroundVideo}
+          resizeMode="cover" repeat={true} />
         <View style={styles.backgroundOverlay} />
 
         <View style={styles.contentContainer}>

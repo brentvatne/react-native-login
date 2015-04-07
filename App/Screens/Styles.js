@@ -32,7 +32,6 @@ module.exports = StyleSheet.create({
     bottom: 0,
   },
   backgroundVideo: {
-    resizeMode: 'cover',
     position: 'absolute',
     top: 0,
     left: 0,

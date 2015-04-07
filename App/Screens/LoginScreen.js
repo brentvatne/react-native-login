@@ -62,7 +62,8 @@ var LoginScreen = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <Video source={"background"} style={styles.backgroundVideo} repeat={true} key="video" />
+        <Video source={"background"} style={styles.backgroundVideo}
+          resizeMode="cover" repeat={true} key="video" />
 
         <View style={styles.loginContainer}>
           <TouchableOpacity onPress={this.login}>
