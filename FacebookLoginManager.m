@@ -5,8 +5,9 @@
 
 @implementation FacebookLoginManager
 
-- (void)newSession:(RCTResponseSenderBlock)callback {
-    RCT_EXPORT();
+RCT_EXPORT_MODULE();
+
+RCT_EXPORT_METHOD(newSession:(RCTResponseSenderBlock)callback) {
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     [login logInWithReadPermissions:@[@"public_profile", @"email"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
@@ -23,6 +24,6 @@
             callback(@[[NSNull null], credentials]);
         }
     }];
-}
+};
 
 @end

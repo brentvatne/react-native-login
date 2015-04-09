@@ -8,7 +8,6 @@ var {
   TouchableOpacity,
   Image,
   Navigator,
-  AlertIOS,
 } = React;
 
 var UserActions = require('../Actions/UserActions');
@@ -22,20 +21,7 @@ var UserStoreSync = require('../Mixins/UserStoreSync');
 var DeviceHeight = require('Dimensions').get('window').height;
 
 var LoginScreen = React.createClass({
-  mixins: [UserStoreSync],
-
-  getInitialState() {
-    return { modalIsOpen: false }
-  },
-
-  openModal() {
-    this.setState({modalIsOpen: true});
-  },
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  },
-
+  mixins: [UserStoreSync, Modal.Mixin],
 
   login() {
     UserActions.newFacebookSession();
@@ -62,8 +48,10 @@ var LoginScreen = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <Video source={"background"} style={styles.backgroundVideo}
-          resizeMode="cover" repeat={true} key="video" />
+        <Video source={{uri: "background"}}
+               style={styles.backgroundVideo}
+               rate={1} volume={1} muted={true}
+               resizeMode="cover" repeat={true} key="video1" />
 
         <View style={styles.loginContainer}>
           <TouchableOpacity onPress={this.login}>
@@ -83,7 +71,7 @@ var LoginScreen = React.createClass({
           </TouchableOpacity>
         </View>
 
-        <Modal isVisible={this.state.modalIsOpen}
+        <Modal isVisible={this.state.isModalOpen}
                onClose={this.closeModal}
                customShowHandler={this.showModalTransition}
                customHideHandler={this.hideModalTransition}
