@@ -73,6 +73,8 @@ var LoginScreen = React.createClass({
 
         <Modal isVisible={this.state.isModalOpen}
                onClose={this.closeModal}
+               backdropType="blur"
+               backdropBlur="light"
                customShowHandler={this.showModalTransition}
                customHideHandler={this.hideModalTransition}
                onPressBackdrop={this.closeModal}>
