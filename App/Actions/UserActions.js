@@ -6,7 +6,6 @@ var FacebookApi = require('../Apis/FacebookApi');
 var AlertIOS = require('react-native').AlertIOS;
 
 module.exports = {
-
   newFacebookSession() {
     FacebookLoginManager.newSession((error, info) => {
       if (error) {

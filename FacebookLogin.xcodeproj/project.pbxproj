@@ -28,6 +28,9 @@
 		BB6BBC4A1AC4D01600E64D73 /* FacebookLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6BBC491AC4D01600E64D73 /* FacebookLoginManager.m */; };
 		BBD49E321AC8D23C00610F8E /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BBD49E311AC8D23C00610F8E /* background.mp4 */; };
 		BBD4CA4F1ACB17AB00E6AAB9 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD4CA451ACB179500E6AAB9 /* libBVLinearGradient.a */; };
+		BBD855F71AF8443C00E62E2D /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD855F41AF8443C00E62E2D /* BlurView.m */; };
+		BBD855F81AF8443C00E62E2D /* BlurViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD855F61AF8443C00E62E2D /* BlurViewManager.m */; };
+		BBD856061AF845A100E62E2D /* libRNOverlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD856051AF8459900E62E2D /* libRNOverlay.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,13 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = BVLinearGradient;
 		};
+		BBD856041AF8459900E62E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBD856001AF8459900E62E2D /* RNOverlay.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNOverlay;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +154,11 @@
 		BBB7FD751AD5D96600EBE25F /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "node_modules/react-native/Libraries/GeoLocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		BBD49E311AC8D23C00610F8E /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		BBD4CA401ACB179500E6AAB9 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
+		BBD855F31AF8443C00E62E2D /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlurView.h; path = "node_modules/react-native-modal/node_modules/react-native-blur/RNBlur/BlurView.h"; sourceTree = "<group>"; };
+		BBD855F41AF8443C00E62E2D /* BlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurView.m; path = "node_modules/react-native-modal/node_modules/react-native-blur/RNBlur/BlurView.m"; sourceTree = "<group>"; };
+		BBD855F51AF8443C00E62E2D /* BlurViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlurViewManager.h; path = "node_modules/react-native-modal/node_modules/react-native-blur/RNBlur/BlurViewManager.h"; sourceTree = "<group>"; };
+		BBD855F61AF8443C00E62E2D /* BlurViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurViewManager.m; path = "node_modules/react-native-modal/node_modules/react-native-blur/RNBlur/BlurViewManager.m"; sourceTree = "<group>"; };
+		BBD856001AF8459900E62E2D /* RNOverlay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNOverlay.xcodeproj; path = "node_modules/react-native-modal/node_modules/react-native-overlay/RNOverlay.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD856061AF845A100E62E2D /* libRNOverlay.a in Frameworks */,
 				BB610A201AD436A500563A76 /* libRCTVideo.a in Frameworks */,
 				BBD4CA4F1ACB17AB00E6AAB9 /* libBVLinearGradient.a in Frameworks */,
 				00481BEA1AC0C89D00671115 /* libicucore.dylib in Frameworks */,
@@ -255,6 +271,11 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BBD856001AF8459900E62E2D /* RNOverlay.xcodeproj */,
+				BBD855F31AF8443C00E62E2D /* BlurView.h */,
+				BBD855F41AF8443C00E62E2D /* BlurView.m */,
+				BBD855F51AF8443C00E62E2D /* BlurViewManager.h */,
+				BBD855F61AF8443C00E62E2D /* BlurViewManager.m */,
 				BBB7FD751AD5D96600EBE25F /* RCTGeolocation.xcodeproj */,
 				BBD4CA401ACB179500E6AAB9 /* BVLinearGradient.xcodeproj */,
 				BB65DD8B1ACA6FE200138D22 /* RCTVideo.xcodeproj */,
@@ -320,6 +341,14 @@
 			isa = PBXGroup;
 			children = (
 				BBD4CA451ACB179500E6AAB9 /* libBVLinearGradient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD856011AF8459900E62E2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBD856051AF8459900E62E2D /* libRNOverlay.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -412,6 +441,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = BBD856011AF8459900E62E2D /* Products */;
+					ProjectRef = BBD856001AF8459900E62E2D /* RNOverlay.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -506,6 +539,13 @@
 			remoteRef = BBD4CA441ACB179500E6AAB9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BBD856051AF8459900E62E2D /* libRNOverlay.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNOverlay.a;
+			remoteRef = BBD856041AF8459900E62E2D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -527,8 +567,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6BBC4A1AC4D01600E64D73 /* FacebookLoginManager.m in Sources */,
+				BBD855F71AF8443C00E62E2D /* BlurView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BBD855F81AF8443C00E62E2D /* BlurViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +604,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/node_modules/react-native-modal/node_modules/react-native-overlay/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = FacebookLogin;
 			};
@@ -582,6 +628,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/node_modules/react-native-modal/node_modules/react-native-overlay/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = FacebookLogin;
 			};
