@@ -6,11 +6,11 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
-    "react-native": "^0.4.0",
-    "react-native-video": "^0.3.1",
-    "react-native-linear-gradient": "^0.2.0",
-    "react-native-modal": "^0.2.14",
-    "immutable": "^3.7.1",
-    "flux-util": "0.1.1"
+    "flux-util": "0.1.1",
+    "immutable": "^3.7.3",
+    "react-native": "^0.5.0",
+    "react-native-linear-gradient": "^0.3.1",
+    "react-native-modal": "^0.3.7",
+    "react-native-video": "^0.4.3"
   }
 }
