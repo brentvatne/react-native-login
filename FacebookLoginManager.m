@@ -10,6 +10,7 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(newSession:(RCTResponseSenderBlock)callback) {
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    login.loginBehavior = FBSDKLoginBehaviorSystemAccount;
     [login logInWithReadPermissions:@[@"public_profile", @"email"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
         
         if (error) {
