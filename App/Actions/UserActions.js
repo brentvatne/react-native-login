@@ -12,7 +12,6 @@ var FacebookApi = require('../Apis/FacebookApi');
 module.exports = {
   newFacebookSession() {
     FacebookLoginManager.newSession((error, info) => {
-      alert('test');
       if (error) {
         //AlertIOS.alert('Unable to sign in');
       } else {
