@@ -2,7 +2,7 @@
 
 [Blog post about integrating Facebook SDK with react-native here](http://brentvatne.ca/facebook-login-with-react-native/).
 
-*Deprecation warning*: This is still a useful example to learn how to write native modules and create a login screen, but you should be using [react-native-fbsdk](https://github.com/facebook/react-native-fbsdk) now for a more robust solution.
+**Deprecation warning**: This is still a useful example to learn how to write native modules and create a login screen, but you should be using [react-native-fbsdk](https://github.com/facebook/react-native-fbsdk) now for a more robust solution.
 
 *Note*: To get this project running, you need to install the [Facebook SDK for iOS](https://developers.facebook.com/docs/ios)! 
 
