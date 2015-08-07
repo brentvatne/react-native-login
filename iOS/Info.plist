@@ -44,15 +44,15 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>FacebookAppID</key>
-	<string>1637259423184261</string>
+	<string>1578386199112090</string>
 	<key>FacebookDisplayName</key>
-	<string>Sponsor Network</string>
+	<string>LoginReactNative</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1637259423184261</string>
+				<string>fb1578386199112090</string>
 			</array>
 		</dict>
 	</array>
