@@ -13,7 +13,7 @@ module.exports = {
   newFacebookSession() {
     FacebookLoginManager.newSession((error, info) => {
       if (error) {
-        //AlertIOS.alert('Unable to sign in');
+        AlertIOS.alert('Unable to sign in');
       } else {
         FacebookApi.getUserInfo(info.userId, info.token);
       }
