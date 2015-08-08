@@ -8,10 +8,10 @@ var {
   Stylesheet,
 } = React;
 
-var LocalStorage = require('./Stores/LocalStorage');
-var UserStore = require('./Stores/UserStore');
-var UserInfoScreen = require('./Screens/UserInfoScreen');
-var LoginScreen = require('./Screens/LoginScreen');
+var LocalStorage = require('./App/Stores/LocalStorage');
+var UserStore = require('./App/Stores/UserStore');
+var UserInfoScreen = require('./App/Screens/UserInfoScreen');
+var LoginScreen = require('./App/Screens/LoginScreen');
 
 var FacebookLogin = React.createClass({
   getInitialState() {
